@@ -1,0 +1,415 @@
+body {
+    background-image: url("../img/backHome.jpeg");
+    background-size: 100% 100%;
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+#principal{
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    background-color: white;
+    filter: opacity(80%); 
+}
+
+#cabecalho{
+    width: 100%;
+    height: 200px;
+    background-image: url("../img/cabecalho.png");
+    background-size: 100% 100%;
+}
+
+#menu{
+    width: 100%;
+    height: 5%;
+}
+
+
+.menuB{
+    height: 50px;
+    width: 20%;
+    float: left;
+    background-color: rgba(30, 29, 29, 0.9);
+    color: rgb(97, 250, 97) ;
+    font-weight: bold;
+    font-size: 22px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.menuB:hover{
+    color: brown;
+    font-size: 24px;
+    transition: color 1s;
+}
+
+#texto{
+    width: 95%;
+    height: 80%; 
+    padding-left: 2%;
+    padding-top: 2%;
+}
+
+p{
+    font-size: 24px;
+    text-align: justify;
+    padding: 2.2%;
+}
+
+h2{
+    font-size: 30px;
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 2%;
+}
+
+h3{
+    font-size: 20px;
+}
+
+
+
+.conteudo{
+    width: 100%;
+    height: 90%;
+}
+
+.imagePag{
+    width: 100%;
+    height: 70%;
+}
+
+.imagePag img{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+footer {
+    height: 2%;
+    text-align: center; 
+    padding: 2%; 
+    display: inline-block;
+    bottom: 0;
+    width: 100%; 
+    font-size: 20px;    
+}
+
+/*------------  Index ----------------------------------*/
+
+#containerPersonagens {
+    width: 85%;
+    height: 100vh;
+    background-color: white;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+}
+
+.pagina{
+    width: 100%;
+}
+
+
+section{
+    height: 100vh;
+    scroll-snap-align: start;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.personagemBox {
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+    
+}
+
+.personagemImg {
+    display: flex;
+    position: start;
+    justify-content: center;
+    width: 50%;
+    height: 80%;
+    margin: 10%;
+}
+
+.personagemImg img {
+    width: 100%;
+    height: 80%;
+    border-radius: 10px;
+}
+
+.personagemTxt {
+    font-size: 22px;
+    text-align: justify;
+    padding: 20px;
+    background-color: rgba(60, 129, 79, 0.2);
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    height: 400px;
+    width: 300px;
+}
+
+.personagemVideo {
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    align-items: center;
+    height: 295px;
+    width: 350px;
+}
+
+.personagemVideo iframe {
+    width: 90%;
+    height: auto; /* Ajuste proporcional */
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+/*------------ Personagens ----------------------------------*/
+
+@media screen and (max-width: 1200px) {
+    .menuB{
+        font-size: 20px;
+        height: 50px;
+        width: 20%;
+    }
+    .menuB:hover{
+        color: brown;
+        font-size: 22px;
+        transition: color 1s;
+    }
+    .menuB:hover{
+        color: brown;
+        font-size: 22px;
+        transition: color 1s;
+    }
+    h2{
+        font-size: 25px;
+        text-align: center;
+        padding-top: 10%;
+        padding-bottom: 2%;
+    }
+    #texto{
+        width: 95%;
+        height: 80%; 
+        padding-left: 2%;
+        padding-right: 2%;
+        padding-top: 5%;
+    }
+   
+    .personagemBox {
+        display: inline-block;
+        width: 50%;
+        height: 100%;
+        
+    }
+    
+    .personagemImg {
+        display: flex;
+        position: start;
+        justify-content: center;
+        width: 50%;
+        height: 80%;
+        margin: 10%;
+    }
+    
+    .personagemImg img {
+        width: 100%;
+        height: 60%;
+        border-radius: 10px;
+    }
+    
+    .personagemTxt {
+        font-size: 22px;
+        text-align: justify;
+        padding: 20px;
+        background-color: rgba(60, 129, 79, 0.2);
+        border-radius: 8px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        height: 350px;
+        width: 300px;
+    }
+    
+    .personagemVideo {
+        display: flex;
+        align-items: end;
+        justify-content: center;
+        align-items: center;
+        height: 350px;
+        width: 350px;
+    }
+    
+    .personagemVideo iframe {
+        width: 90%;
+        height: auto; /* Ajuste proporcional */
+        border-radius: 8px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+}
+
+@media screen and (max-width: 900px) {
+    .menuB{
+        font-size: 18px;
+        height: 40px;
+        width: 20%;
+    }
+    .menuB:hover{
+        color: brown;
+        font-size: 20px;
+        transition: color 1s;
+    }
+    h2{
+        font-size: 22px;
+        text-align: center;
+        padding-top: 10%;
+        padding-bottom: 2%;
+    }
+    #containerPersonagens {
+        display: grid;
+        grid-template-columns: 1fr; /* Uma única coluna */
+        grid-template-rows: auto; /* Ajusta a altura automaticamente */
+        gap: 20px;
+        padding: 20px; /* Espaço interno */
+    }
+
+    .pagina {
+        display: grid;
+        grid-template-columns: 1fr; /* Tudo empilhado */
+        gap: 10px;
+        width: 100%;
+        height: auto;
+    }
+
+    #texto{
+        width: 95%;
+        height: 80%; 
+        padding-left: 2%;
+        padding-right: 2%;
+        padding-top: 5%;
+    }
+
+    .personagemImg {
+        width: 100%; /* Ocupa toda a largura */
+        height: auto; /* Ajusta proporcionalmente */
+        margin: 0; /* Remove margens extras */
+    }
+
+    .personagemImg img {
+        width: 100%;
+        height: auto;
+    }
+
+    .personagemBox {
+        display: grid;
+        grid-template-rows: auto auto; /* Duas linhas: uma para texto e outra para vídeo */
+        gap: 20px;
+        width: 100%;
+    }
+
+    .personagemTxt {
+        width: 100%;
+        font-size: 18px; 
+        height: auto;
+        padding: 15px;
+    }
+
+    .personagemVideo {
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+@media screen and (max-width: 700px) {
+    .menuB{
+        font-size: 14px;
+        height: 30px;
+        width: 100%;
+    }
+    .menuB:hover{
+        color: brown;
+        font-size: 16px;
+        transition: color 1s;
+    }
+    h2{
+        font-size: 20px;
+        text-align: center;
+        padding-top: 50%;
+        padding-bottom: 2%;
+    }
+    #containerPersonagens {
+        grid-template-columns: 1fr; /* Mantém o layout em uma única coluna */
+    }
+    #texto{
+        width: 95%;
+        height: 80%; 
+        padding-left: 2%;
+        padding-right: 2%;
+        padding-top: 45%;
+    }
+
+    .personagemBox {
+        grid-template-rows: auto auto; /* Mantém texto e vídeo em duas linhas */
+        gap: 15px;
+    }
+
+    .personagemTxt {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .personagemVideo iframe {
+        width: 100%; 
+        height: auto;
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+    .menuB{
+        font-size: 14px; 
+        height: 20px;
+        width: 100%;   
+        padding-bottom: 1%;
+    }
+    .menuB:hover{
+        color: brown;
+        font-size: 16px;
+        transition: color 1s;
+    }
+    h2{
+        font-size: 20px;
+        text-align: center;
+        padding-top: 60%;
+        padding-bottom: 2%;
+    }
+    #containerPersonagens {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    #texto{
+        width: 95%;
+        height: 80%; 
+        padding-left: 2%;
+        padding-right: 2%;
+        padding-top: 55%;
+    }
+
+    .personagemTxt {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .personagemVideo iframe {
+        width: 100%;
+        height: auto;
+    }
+}
