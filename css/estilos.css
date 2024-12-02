@@ -7,13 +7,7 @@ body {
 
 
 
-#principal{
-    width: 80%;
-    height: 100%;
-    margin: auto;
-    background-color: white;
-    filter: opacity(80%); 
-}
+
 
 #cabecalho{
     width: 100%;
@@ -22,25 +16,32 @@ body {
     background-size: 100% 100%;
 }
 
-#menu{
-    width: 100%;
-    height: 5%;
+#principal{
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    background-color: white;
+}
+
+.conteudo{
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    background-color: white;
+    opacity: 90%;
 }
 
 
-.menuB{
-    height: 50px;
-    width: 20%;
-    float: left;
-    background-color: rgba(30, 29, 29, 0.9);
+.navbar{
+    width: 100%;
+}
+.nav a{
     color: rgb(97, 250, 97) ;
     font-weight: bold;
     font-size: 22px;
-    text-align: center;
-    padding-top: 20px;
 }
 
-.menuB:hover{
+.nav a:hover{
     color: brown;
     font-size: 24px;
     transition: color 1s;
@@ -66,16 +67,10 @@ h2{
     padding-bottom: 2%;
 }
 
-h3{
+.personagem h3{
     font-size: 20px;
 }
 
-
-
-.conteudo{
-    width: 100%;
-    height: 90%;
-}
 
 .imagePag{
     width: 100%;
@@ -108,62 +103,47 @@ footer {
     overflow-y: scroll;
 }
 
-.pagina{
-    width: 100%;
-}
-
-
-section{
-    height: 100vh;
-    scroll-snap-align: start;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.personagemBox {
-    display: inline-block;
-    width: 50%;
-    height: 100%;
-    
+.pagina {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Duas colunas com largura igual */
+    gap: 20px; /* Espaçamento entre os elementos */
+    align-items: center; /* Alinhamento vertical */
+    height: 100vh; /* Mantém a altura da página */
+    scroll-snap-align: start; /* Scroll suave */
+    padding: 20px; /* Espaçamento interno */
 }
 
 .personagemImg {
+    width: 100%;
+    height: auto;
     display: flex;
-    position: start;
     justify-content: center;
-    width: 50%;
-    height: 80%;
-    margin: 10%;
+    align-items: center;
 }
 
 .personagemImg img {
-    width: 100%;
-    height: 80%;
+    width: 90%; /* Ajuste para caber dentro da célula */
+    height: 400px;
     border-radius: 10px;
 }
 
+.personagemBox {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espaçamento entre texto e vídeo */
+}
+
 .personagemTxt {
-    font-size: 22px;
+    font-size: 26px;
     text-align: justify;
     padding: 20px;
     background-color: rgba(60, 129, 79, 0.2);
     border-radius: 8px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    height: 400px;
-    width: 300px;
-}
-
-.personagemVideo {
-    display: flex;
-    align-items: end;
-    justify-content: center;
-    align-items: center;
-    height: 295px;
-    width: 350px;
 }
 
 .personagemVideo iframe {
-    width: 90%;
+    width: 100%;
     height: auto; /* Ajuste proporcional */
     border-radius: 8px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
@@ -174,242 +154,274 @@ section{
 
 /*------------ Personagens ----------------------------------*/
 
-@media screen and (max-width: 1200px) {
-    .menuB{
-        font-size: 20px;
-        height: 50px;
-        width: 20%;
-    }
-    .menuB:hover{
-        color: brown;
-        font-size: 22px;
-        transition: color 1s;
-    }
-    .menuB:hover{
-        color: brown;
-        font-size: 22px;
-        transition: color 1s;
-    }
-    h2{
-        font-size: 25px;
-        text-align: center;
-        padding-top: 10%;
-        padding-bottom: 2%;
-    }
-    #texto{
-        width: 95%;
-        height: 80%; 
-        padding-left: 2%;
-        padding-right: 2%;
-        padding-top: 5%;
-    }
-   
-    .personagemBox {
-        display: inline-block;
-        width: 50%;
-        height: 100%;
-        
-    }
     
-    .personagemImg {
-        display: flex;
-        position: start;
-        justify-content: center;
-        width: 50%;
-        height: 80%;
-        margin: 10%;
-    }
+    @media screen and (max-width: 1200px) {
+        h2 {
+            font-size: 26px;
+            text-align: center;
+            padding-top: 8%;
+            padding-bottom: 2%;
+        }
+
+        .personagemTxt h3{
+            font-size: 20px;
+        }
     
-    .personagemImg img {
-        width: 100%;
-        height: 60%;
-        border-radius: 10px;
-    }
+        #containerPersonagens {
+            display: inline-block; /* Muda para layout inline */
+            width: 100%; /* Ajusta a largura para ocupar todo o espaço disponível */
+        }
     
-    .personagemTxt {
-        font-size: 22px;
-        text-align: justify;
-        padding: 20px;
-        background-color: rgba(60, 129, 79, 0.2);
-        border-radius: 8px;
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-        height: 350px;
-        width: 300px;
-    }
+        .pagina {
+            display: flex; /* Fará que fiquem uma imagem a esquerda e ao lado texto e video*/
+            vertical-align: top; /* Alinha os elementos ao topo */
+            width: 80%; /* Ajusta a largura para se acomodar melhor */
+            margin: 10%; /* Adiciona espaçamento entre os itens */
+            box-sizing: border-box; /* Inclui padding e borda no cálculo da largura */
+        }
     
-    .personagemVideo {
-        display: flex;
-        align-items: end;
-        justify-content: center;
-        align-items: center;
-        height: 350px;
-        width: 350px;
-    }
+        .personagemImg {
+            width: 100%; /* Garante que a imagem ocupe toda a largura da seção */
+        }
     
-    .personagemVideo iframe {
-        width: 90%;
-        height: auto; /* Ajuste proporcional */
-        border-radius: 8px;
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    }
+        .personagemImg img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
     
-}
+        .personagemBox {
+            width: 100%; /* Ajusta para ocupar toda a largura do container */
+            height: auto;
+            
+        }
+    
+        .personagemTxt {
+            font-size: 18px;
+            text-align: justify;
+            padding: 15px;
+            background-color: rgba(60, 129, 79, 0.2);
+            border-radius: 8px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 5%;
+        }
+    
+        .personagemVideo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100px;
+        }
+    
+        .personagemVideo iframe {
+            width: 90%;
+            height: auto; /* Mantém proporção */
+            border-radius: 8px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    }
 
 @media screen and (max-width: 900px) {
-    .menuB{
-        font-size: 18px;
-        height: 40px;
-        width: 20%;
-    }
-    .menuB:hover{
-        color: brown;
-        font-size: 20px;
-        transition: color 1s;
-    }
-    h2{
-        font-size: 22px;
-        text-align: center;
-        padding-top: 10%;
-        padding-bottom: 2%;
-    }
-    #containerPersonagens {
-        display: grid;
-        grid-template-columns: 1fr; /* Uma única coluna */
-        grid-template-rows: auto; /* Ajusta a altura automaticamente */
-        gap: 20px;
-        padding: 20px; /* Espaço interno */
+        h2 {
+            font-size: 24px;
+            padding-top: 10%;
+            padding-bottom: 2%;
+        }
+
+        .personagemTxt h3{
+            font-size: 18px;
+        }
+    
+        #containerPersonagens {
+            display: inline-block; /* Muda para layout inline */
+            width: 100%; /* Ajusta a largura para ocupar todo o espaço disponível */
+        }
+    
+        .pagina {
+            display: flex; /* Fará que fiquem uma imagem a esquerda e ao lado texto e video*/
+            vertical-align: top; /* Alinha os elementos ao topo */
+            width: 80%; /* Ajusta a largura para se acomodar melhor */
+            margin: 10%; /* Adiciona espaçamento entre os itens */
+            box-sizing: border-box; /* Inclui padding e borda no cálculo da largura */
+        }
+    
+        .personagemImg {
+            width: 100%; /* Garante que a imagem ocupe toda a largura da seção */
+        }
+    
+        .personagemImg img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+    
+        .personagemBox {
+            width: 100%; /* Ajusta para ocupar toda a largura do container */
+            height: auto;
+            
+        }
+    
+        .personagemTxt {
+            font-size: 16px;
+            text-align: justify;
+            padding: 15px;
+            background-color: rgba(60, 129, 79, 0.2);
+            border-radius: 8px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 5%;
+        }
+    
+        .personagemVideo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100px;
+        }
+    
+        .personagemVideo iframe {
+            width: 90%;
+            height: auto; /* Mantém proporção */
+            border-radius: 8px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
     }
 
-    .pagina {
-        display: grid;
-        grid-template-columns: 1fr; /* Tudo empilhado */
-        gap: 10px;
-        width: 100%;
-        height: auto;
-    }
-
-    #texto{
-        width: 95%;
-        height: 80%; 
-        padding-left: 2%;
-        padding-right: 2%;
-        padding-top: 5%;
-    }
-
-    .personagemImg {
-        width: 100%; /* Ocupa toda a largura */
-        height: auto; /* Ajusta proporcionalmente */
-        margin: 0; /* Remove margens extras */
-    }
-
-    .personagemImg img {
-        width: 100%;
-        height: auto;
-    }
-
-    .personagemBox {
-        display: grid;
-        grid-template-rows: auto auto; /* Duas linhas: uma para texto e outra para vídeo */
-        gap: 20px;
-        width: 100%;
-    }
-
-    .personagemTxt {
-        width: 100%;
-        font-size: 18px; 
-        height: auto;
-        padding: 15px;
-    }
-
-    .personagemVideo {
-        width: 100%;
-        height: auto;
-    }
-}
 
 
 @media screen and (max-width: 700px) {
-    .menuB{
-        font-size: 14px;
-        height: 30px;
-        width: 100%;
-    }
-    .menuB:hover{
-        color: brown;
-        font-size: 16px;
-        transition: color 1s;
-    }
-    h2{
+ 
+    h2 {
         font-size: 20px;
-        text-align: center;
-        padding-top: 50%;
+        padding-top: 10%;
         padding-bottom: 2%;
     }
-    #containerPersonagens {
-        grid-template-columns: 1fr; /* Mantém o layout em uma única coluna */
+
+    .personagemTxt h3{
+        font-size: 16px;
     }
-    #texto{
-        width: 95%;
-        height: 80%; 
-        padding-left: 2%;
-        padding-right: 2%;
-        padding-top: 45%;
+
+    #containerPersonagens {
+        display: inline-block; /* Muda para layout inline */
+        width: 100%; /* Ajusta a largura para ocupar todo o espaço disponível */
+    }
+
+    .pagina {
+        display: flex; /* Fará que fiquem uma imagem a esquerda e ao lado texto e video*/
+        vertical-align: top; /* Alinha os elementos ao topo */
+        width: 80%; /* Ajusta a largura para se acomodar melhor */
+        margin: 10%; /* Adiciona espaçamento entre os itens */
+        box-sizing: border-box; /* Inclui padding e borda no cálculo da largura */
+    }
+
+    .personagemImg {
+        width: 100%; /* Garante que a imagem ocupe toda a largura da seção */
+    }
+
+    .personagemImg img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
     }
 
     .personagemBox {
-        grid-template-rows: auto auto; /* Mantém texto e vídeo em duas linhas */
-        gap: 15px;
+        width: 100%; /* Ajusta para ocupar toda a largura do container */
+        height: auto;
+        
     }
 
     .personagemTxt {
-        font-size: 16px;
-        padding: 10px;
+        font-size: 14px;
+        text-align: justify;
+        padding: 15px;
+        background-color: rgba(60, 129, 79, 0.2);
+        border-radius: 8px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        margin: 5%;
+    }
+
+    .personagemVideo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100px;
     }
 
     .personagemVideo iframe {
-        width: 100%; 
-        height: auto;
+        width: 90%;
+        height: auto; /* Mantém proporção */
+        border-radius: 8px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     }
 }
 
 
+
+
 @media screen and (max-width: 500px) {
-    .menuB{
-        font-size: 14px; 
-        height: 20px;
-        width: 100%;   
-        padding-bottom: 1%;
-    }
-    .menuB:hover{
-        color: brown;
+    h2 {
         font-size: 16px;
-        transition: color 1s;
-    }
-    h2{
-        font-size: 20px;
-        text-align: center;
-        padding-top: 60%;
+        padding-top: 5%;
         padding-bottom: 2%;
     }
-    #containerPersonagens {
-        grid-template-columns: 1fr;
-        gap: 10px;
+
+    .personagemTxt h3{
+        font-size: 14px;
     }
-    #texto{
-        width: 95%;
-        height: 80%; 
-        padding-left: 2%;
-        padding-right: 2%;
-        padding-top: 55%;
+
+    #containerPersonagens {
+        display: inline-block; /* Muda para layout inline */
+        align-items: center;
+        width: 100%; /* Ajusta a largura para ocupar todo o espaço disponível */
+    }
+
+    .pagina {
+        display: inline-block; /* Fará que fiquem uma imagem a esquerda e ao lado texto e video*/
+        vertical-align: top; /* Alinha os elementos ao topo */
+        width: 90%; /* Ajusta a largura para se acomodar melhor */
+        margin: 5%; /* Adiciona espaçamento entre os itens */
+        box-sizing: border-box; /* Inclui padding e borda no cálculo da largura */
+    }
+
+    .personagemImg {
+        width: 100%; /* Garante que a imagem ocupe toda a largura da seção */
+    }
+
+    .personagemImg img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    .personagemBox {
+        width: 100%; /* Ajusta para ocupar toda a largura do container */
+        height: auto;
     }
 
     .personagemTxt {
         font-size: 14px;
-        padding: 8px;
+        text-align: justify;
+        padding: 5px;
+        background-color: rgba(60, 129, 79, 0.2);
+        border-radius: 8px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        margin: 5%;
+    }
+
+    .personagemVideo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: auto;
     }
 
     .personagemVideo iframe {
-        width: 100%;
-        height: auto;
+        width: 90%;
+        height: auto; /* Mantém proporção */
+        border-radius: 8px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     }
 }
